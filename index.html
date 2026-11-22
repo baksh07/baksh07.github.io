@@ -159,24 +159,6 @@ h2{font-weight:800;font-size:clamp(36px,6vw,84px);line-height:1;letter-spacing:-
 .step h3{font-size:clamp(18px,1.8vw,22px);font-weight:600;line-height:1.25}
 .step p{color:var(--muted);font-size:15px}
 
-/* path: skills filling a silhouette */
-.path-grid{display:grid;gap:60px}
-.me{display:none}
-@media (min-width:1000px){
-  .path-grid{grid-template-columns:minmax(0,680px) 400px;justify-content:space-between;align-items:start}
-  .me{display:block;position:sticky;top:96px;height:620px}
-}
-.me svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.me .body{fill:color-mix(in srgb,var(--panel) 70%,transparent);stroke:var(--ice);stroke-width:1.5;stroke-opacity:.55}
-.me .fill{fill:var(--coral);opacity:.10;transform-origin:50% 100%;transform:scaleY(var(--lvl,0));transition:transform .6s ease}
-.me .count{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-size:14px;color:var(--muted)}
-.me .count b{color:var(--coral);font-family:var(--display);font-size:20px;margin-right:6px}
-.skill{position:absolute;display:inline-flex;align-items:center;gap:5px;padding:3px 8px 3px 6px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:11px;font-weight:600;white-space:nowrap;transform:translate(-50%,-50%) translateX(-160px) scale(.6);opacity:0;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .4s}
-.skill img{width:13px;height:13px}
-.skill.in{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.skill.new{border-color:var(--coral);box-shadow:0 0 12px color-mix(in srgb,var(--coral) 45%,transparent)}
-@media (prefers-reduced-motion: reduce){.skill,.me .fill{transition:none}}
-
 /* contact */
 .contact .wrap{padding-block:clamp(110px,18vh,190px) 50px;display:grid;gap:34px}
 .contact h2{font-size:clamp(48px,11vw,170px);margin:0;line-height:.9}
@@ -386,25 +368,15 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
   <div class="wrap">
     <p class="eyebrow">Path</p>
     <h2>How I got here</h2>
-    <div class="path-grid">
     <ol class="steps">
       <span class="path-line" aria-hidden="true"></span>
-      <li class="step" data-skills="Python|C++ basics|OpenCV|DSP"><time>2020 to 2024</time><h3>B.E. Electronics and Communication, KLE Technological University</h3><p>First class with distinction (CGPA 8.09).</p></li>
-      <li class="step" data-skills="PyTorch|CNNs|U-Net|Swin|Restoration"><time>2022 to 2024</time><h3>Project Trainee, KLETech CEVI lab</h3><p>Image restoration research: DeFlare-Net, LLIE-Net, DeepSwin-UNet and the MIPI challenge.</p></li>
-      <li class="step" data-skills="NVIDIA Jetson|SLAM|3D recon"><time>Summer 2023</time><h3>Summer Trainee, IIT Delhi</h3><p>Ran DROID-SLAM on an NVIDIA Jetson AGX Orin for 3D reconstruction and built a web app to render the point clouds. Also attended the 3D Vision Summer School at IIIT Hyderabad.</p></li>
-      <li class="step" data-skills="Hugging Face|Transformers|Docker|AWS GPU|ASR/TTS"><time>2024</time><h3>Deep Learning Intern, SandLogic Technologies</h3><p>Datasets for vision, OCR and audio; custom transformers for text classification; deployed speech and language models on AWS GPU machines.</p></li>
-      <li class="step" data-skills="LangChain|LangGraph|RAG|Pipecat|Kubernetes|FastAPI|Kafka|YOLOv8"><time>2024 to 2025</time><h3>AI Developer, SandLogic Technologies</h3><p>Ira voice agent, agentic RAG, Vocally and document OCR. Trained five interns.</p></li>
-      <li class="step" data-skills="MCP|ONNX|Supabase|Postgres|pgvector|CI|Claude Code"><time>2026 to now</time><h3>M.Sc. AI and Data Science, Deggendorf Institute of Technology</h3><p>Top grade (1.0) in AI and Software Development, Computer Vision, and Generative AI with Transformers. Krones leaderboard, Switchboard, PerfTriage, MIRA and the hackathon win.</p></li>
+      <li class="step"><time>2020 to 2024</time><h3>B.E. Electronics and Communication, KLE Technological University</h3><p>First class with distinction (CGPA 8.09).</p></li>
+      <li class="step"><time>2022 to 2024</time><h3>Project Trainee, KLETech CEVI lab</h3><p>Image restoration research: DeFlare-Net, LLIE-Net, DeepSwin-UNet and the MIPI challenge.</p></li>
+      <li class="step"><time>Summer 2023</time><h3>Summer Trainee, IIT Delhi</h3><p>Ran DROID-SLAM on an NVIDIA Jetson AGX Orin for 3D reconstruction and built a web app to render the point clouds. Also attended the 3D Vision Summer School at IIIT Hyderabad.</p></li>
+      <li class="step"><time>2024</time><h3>Deep Learning Intern, SandLogic Technologies</h3><p>Datasets for vision, OCR and audio; custom transformers for text classification; deployed speech and language models on AWS GPU machines.</p></li>
+      <li class="step"><time>2024 to 2025</time><h3>AI Developer, SandLogic Technologies</h3><p>Ira voice agent, agentic RAG, Vocally and document OCR. Trained five interns.</p></li>
+      <li class="step"><time>2026 to now</time><h3>M.Sc. AI and Data Science, Deggendorf Institute of Technology</h3><p>Top grade (1.0) in AI and Software Development, Computer Vision, and Generative AI with Transformers. Krones leaderboard, Switchboard, PerfTriage, MIRA and the hackathon win.</p></li>
     </ol>
-    <aside class="me" aria-label="Skills gained along the way">
-      <svg viewBox="0 0 300 520" aria-hidden="true">
-        <defs><clipPath id="meclip"><circle cx="150" cy="70" r="52"/><path d="M150 132c-34 0-58 8-74 22-24 21-32 52-34 92l-6 150c-1 22 14 34 30 34h20l4 100h120l4-100h20c16 0 31-12 30-34l-6-150c-2-40-10-71-34-92-16-14-40-22-74-22z"/></clipPath></defs>
-        <g class="body"><circle cx="150" cy="70" r="52"/><path d="M150 132c-34 0-58 8-74 22-24 21-32 52-34 92l-6 150c-1 22 14 34 30 34h20l4 100h120l4-100h20c16 0 31-12 30-34l-6-150c-2-40-10-71-34-92-16-14-40-22-74-22z"/></g>
-        <rect class="fill" x="0" y="0" width="300" height="520" clip-path="url(#meclip)"/>
-      </svg>
-      <p class="count"><b id="skillCount">0</b>skills picked up</p>
-    </aside>
-    </div>
   </div>
 </section>
 
@@ -634,56 +606,6 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
     ScrollTrigger.create({trigger:s, start:'top 65%', toggleClass:{targets:s, className:'on'}});
     gsap.from(s, {x:40, opacity:.3, ease:'power2.out', scrollTrigger:{trigger:s, start:'top 92%', end:'top 65%', scrub:true}});
   });
-
-  /* skills fill the silhouette as the path is scrolled */
-  (function(){
-    const me = document.querySelector('.me');
-    if (!me) return;
-    const icons = {'Python':'python','C++ basics':'cplusplus','OpenCV':'opencv','PyTorch':'pytorch','NVIDIA Jetson':'nvidia','Hugging Face':'huggingface','Docker':'docker','LangChain':'langchain','LangGraph':'langgraph','Kubernetes':'kubernetes','FastAPI':'fastapi','Kafka':'apachekafka','ONNX':'onnx','Supabase':'supabase','Postgres':'postgresql','CI':'githubactions','Claude Code':'claude','MCP':'modelcontextprotocol'};
-    const steps = [...document.querySelectorAll('.step[data-skills]')];
-    const groups = []; let n = 0;
-    const total = steps.reduce((a, s) => a + s.dataset.skills.split('|').length, 0);
-    steps.forEach(step => {
-      const chips = step.dataset.skills.split('|').map(name => {
-        const i = n++, row = Math.floor(i / 3), col = i % 3;
-        const el = document.createElement('span');
-        el.className = 'skill';
-        el.style.left = (22 + col * 28) + '%';
-        el.style.top = (30 + row * (52 / Math.ceil(total / 3))) + '%';
-        if (icons[name]) {
-          const img = new Image(13, 13); img.alt = ''; img.loading = 'lazy';
-          img.src = 'https://cdn.simpleicons.org/' + icons[name];
-          img.onerror = () => img.remove();
-          el.appendChild(img);
-        }
-        el.appendChild(document.createTextNode(name));
-        me.appendChild(el);
-        return el;
-      });
-      groups.push(chips);
-    });
-    const count = document.getElementById('skillCount');
-    let last = -1;
-    function update(){
-      const line = innerHeight * 0.65;
-      let active = -1;
-      steps.forEach((s, i) => { if (s.getBoundingClientRect().top < line) active = i; });
-      if (active === last) return;
-      let shown = 0;
-      groups.forEach((chips, i) => chips.forEach(c => {
-        c.classList.toggle('in', i <= active);
-        c.classList.toggle('new', i === active);
-        if (i <= active) shown++;
-      }));
-      count.textContent = shown;
-      me.style.setProperty('--lvl', active < 0 ? 0 : (active + 1) / steps.length);
-      last = active;
-    }
-    let ticking = false;
-    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; update(); }); } }, {passive:true});
-    addEventListener('resize', update);
-    update();
-  })();
 
   /* publications lift in */
   gsap.utils.toArray('.pub').forEach(p => gsap.from(p, {y:50, opacity:.3, ease:'power2.out', scrollTrigger:{trigger:p, start:'top 95%', end:'top 70%', scrub:true}}));
