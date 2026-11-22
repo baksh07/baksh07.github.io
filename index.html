@@ -388,12 +388,12 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
     <div class="path-grid">
     <ol class="steps">
       <span class="path-line" aria-hidden="true"></span>
-      <li class="step" data-skills="Python|C++ basics|OpenCV|DSP"><time>2020 to 2024</time><h3>B.E. Electronics and Communication, KLE Technological University</h3><p>First class with distinction (CGPA 8.09).</p></li>
-      <li class="step" data-skills="PyTorch|CNNs|U-Net|Swin|Image restoration"><time>2022 to 2024</time><h3>Project Trainee, KLETech CEVI lab</h3><p>Image restoration research: DeFlare-Net, LLIE-Net, DeepSwin-UNet and the MIPI challenge.</p></li>
+      <li class="step" data-skills="Python|C++ basics|OpenCV|DSP|Git|Linux"><time>2020 to 2024</time><h3>B.E. Electronics and Communication, KLE Technological University</h3><p>First class with distinction (CGPA 8.09).</p></li>
+      <li class="step" data-skills="PyTorch|CNNs|U-Net|Swin|Image restoration|NumPy"><time>2022 to 2024</time><h3>Project Trainee, KLETech CEVI lab</h3><p>Image restoration research: DeFlare-Net, LLIE-Net, DeepSwin-UNet and the MIPI challenge.</p></li>
       <li class="step" data-skills="NVIDIA Jetson|SLAM|3D reconstruction"><time>Summer 2023</time><h3>Summer Trainee, IIT Delhi</h3><p>Ran DROID-SLAM on an NVIDIA Jetson AGX Orin for 3D reconstruction and built a web app to render the point clouds. Also attended the 3D Vision Summer School at IIIT Hyderabad.</p></li>
-      <li class="step" data-skills="Hugging Face|Transformers|Docker|AWS GPU|ASR/TTS"><time>2024</time><h3>Deep Learning Intern, SandLogic Technologies</h3><p>Datasets for vision, OCR and audio; custom transformers for text classification; deployed speech and language models on AWS GPU machines.</p></li>
-      <li class="step" data-skills="LangChain|LangGraph|RAG|Pipecat|Kubernetes|FastAPI|Kafka|YOLOv8"><time>2024 to 2025</time><h3>AI Developer, SandLogic Technologies</h3><p>Ira voice agent, agentic RAG, Vocally and document OCR. Trained five interns.</p></li>
-      <li class="step" data-skills="MCP|ONNX|Supabase|PostgreSQL|pgvector|GitHub Actions|Claude Code"><time>2026 to now</time><h3>M.Sc. AI and Data Science, Deggendorf Institute of Technology</h3><p>Top grade (1.0) in AI and Software Development, Computer Vision, and Generative AI with Transformers. Krones leaderboard, Switchboard, PerfTriage, MIRA and the hackathon win.</p></li>
+      <li class="step" data-skills="Hugging Face|Transformers|Docker|AWS (EC2, GPU)|ASR/TTS|Whisper"><time>2024</time><h3>Deep Learning Intern, SandLogic Technologies</h3><p>Datasets for vision, OCR and audio; custom transformers for text classification; deployed speech and language models on AWS GPU machines.</p></li>
+      <li class="step" data-skills="LangChain|LangGraph|RAG|Pipecat|AWS EKS|Kubernetes|FastAPI|Kafka|YOLOv8|Chroma|BentoML|OpenAI API|Dify|vLLM|Twilio"><time>2024 to 2025</time><h3>AI Developer, SandLogic Technologies</h3><p>Ira voice agent, agentic RAG, Vocally and document OCR. Trained five interns.</p></li>
+      <li class="step" data-skills="MCP|ONNX|Supabase|PostgreSQL|pgvector|SQLAlchemy|GitHub Actions|pytest|LangSmith|scikit-learn|Claude Code"><time>2026 to now</time><h3>M.Sc. AI and Data Science, Deggendorf Institute of Technology</h3><p>Top grade (1.0) in AI and Software Development, Computer Vision, and Generative AI with Transformers. Krones leaderboard, Switchboard, PerfTriage, MIRA and the hackathon win.</p></li>
     </ol>
     <aside class="skillstack" aria-label="Skills I picked up along the way">
       <div class="pile"></div>
@@ -635,7 +635,7 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
     const stack = document.querySelector('.skillstack');
     if (!stack) return;
     const pile = stack.querySelector('.pile');
-    const icons = {'Python':'python','C++ basics':'cplusplus','OpenCV':'opencv','PyTorch':'pytorch','NVIDIA Jetson':'nvidia','Hugging Face':'huggingface','Transformers':'huggingface','Docker':'docker','LangChain':'langchain','LangGraph':'langgraph','Kubernetes':'kubernetes','FastAPI':'fastapi','Kafka':'apachekafka','ONNX':'onnx','Supabase':'supabase','PostgreSQL':'postgresql','GitHub Actions':'githubactions','Claude Code':'claude','MCP':'modelcontextprotocol'};
+    const icons = {'Python':'python','C++ basics':'cplusplus','OpenCV':'opencv','PyTorch':'pytorch','NVIDIA Jetson':'nvidia','Hugging Face':'huggingface','Transformers':'huggingface','Docker':'docker','LangChain':'langchain','LangGraph':'langgraph','Kubernetes':'kubernetes','FastAPI':'fastapi','Kafka':'apachekafka','ONNX':'onnx','Supabase':'supabase','PostgreSQL':'postgresql','GitHub Actions':'githubactions','Claude Code':'claude','MCP':'modelcontextprotocol','Git':'git','Linux':'linux','NumPy':'numpy','AWS (EC2, GPU)':'amazonwebservices','AWS EKS':'amazoneks','OpenAI API':'openai','Twilio':'twilio','SQLAlchemy':'sqlalchemy','pytest':'pytest','scikit-learn':'scikitlearn','BentoML':'bentoml'};
     const steps = [...document.querySelectorAll('.step[data-skills]')];
     const groups = steps.map(step => step.dataset.skills.split('|').map((name, k) => {
       const el = document.createElement('span');
