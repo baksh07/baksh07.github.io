@@ -164,9 +164,9 @@ h2{font-weight:800;font-size:clamp(36px,6vw,84px);line-height:1;letter-spacing:-
 .skillstack{display:none}
 @media (min-width:1000px){
   .path-grid{grid-template-columns:minmax(0,680px) 360px;justify-content:space-between;align-items:start}
-  .skillstack{display:block;position:sticky;top:100px;height:min(600px,calc(100vh - 130px))}
+  .skillstack{display:block;position:sticky;top:92px;height:min(720px,calc(100vh - 110px))}
 }
-.skillstack .pile{position:absolute;left:0;right:0;bottom:44px;top:0;display:flex;flex-wrap:wrap-reverse;align-content:flex-start;justify-content:center;gap:6px 5px;padding:0 6px;border-bottom:2px solid var(--line)}
+.skillstack .pile{position:absolute;left:0;right:0;bottom:44px;top:0;display:flex;flex-wrap:wrap-reverse;align-content:flex-start;justify-content:center;gap:5px 4px;padding:0 4px;border-bottom:2px solid var(--line)}
 .skillstack .count{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:14px;color:var(--muted);margin:0}
 .skillstack .count b{color:var(--coral);font-family:var(--display);font-size:20px;margin-right:6px}
 .skill{display:none;align-items:center;gap:5px;padding:4px 9px 4px 7px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-size:11px;font-weight:600;white-space:nowrap}
@@ -392,8 +392,8 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
       <li class="step" data-skills="PyTorch|CNNs|U-Net|Swin|Image restoration|NumPy"><time>2022 to 2024</time><h3>Project Trainee, KLETech CEVI lab</h3><p>Image restoration research: DeFlare-Net, LLIE-Net, DeepSwin-UNet and the MIPI challenge.</p></li>
       <li class="step" data-skills="NVIDIA Jetson|SLAM|3D reconstruction"><time>Summer 2023</time><h3>Summer Trainee, IIT Delhi</h3><p>Ran DROID-SLAM on an NVIDIA Jetson AGX Orin for 3D reconstruction and built a web app to render the point clouds. Also attended the 3D Vision Summer School at IIIT Hyderabad.</p></li>
       <li class="step" data-skills="Hugging Face|Transformers|Docker|AWS (EC2, GPU)|ASR/TTS|Whisper"><time>2024</time><h3>Deep Learning Intern, SandLogic Technologies</h3><p>Datasets for vision, OCR and audio; custom transformers for text classification; deployed speech and language models on AWS GPU machines.</p></li>
-      <li class="step" data-skills="LangChain|LangGraph|RAG|Pipecat|AWS EKS|Kubernetes|FastAPI|Kafka|YOLOv8|Chroma|BentoML|OpenAI API|Groq|Gemini|Dify|vLLM|SGLang|llama.cpp|Twilio"><time>2024 to 2025</time><h3>AI Developer, SandLogic Technologies</h3><p>Ira voice agent, agentic RAG, Vocally and document OCR. Trained five interns.</p></li>
-      <li class="step" data-skills="MCP|ONNX|Supabase|PostgreSQL|pgvector|SQLAlchemy|GitHub Actions|pytest|LangSmith|Ollama|scikit-learn|Claude Code"><time>2026 to now</time><h3>M.Sc. AI and Data Science, Deggendorf Institute of Technology</h3><p>Top grade (1.0) in AI and Software Development, Computer Vision, and Generative AI with Transformers. Krones leaderboard, Switchboard, PerfTriage, MIRA and the hackathon win.</p></li>
+      <li class="step" data-skills="LangChain|LangGraph|RAG|Pipecat|AWS EKS|Kubernetes|FastAPI|Kafka|YOLOv8|BentoML|OpenAI API|Groq|Gemini|Dify|vLLM|SGLang|llama.cpp|Twilio"><time>2024 to 2025</time><h3>AI Developer, SandLogic Technologies</h3><p>Ira voice agent, agentic RAG, Vocally and document OCR. Trained five interns.</p></li>
+      <li class="step" data-skills="MCP|ONNX|Supabase|PostgreSQL|pgvector|SQLAlchemy|GitHub Actions|pytest|LangSmith|Ollama|scikit-learn|Claude Code|Cursor|GitHub Copilot|Bolt|Lovable"><time>2026 to now</time><h3>M.Sc. AI and Data Science, Deggendorf Institute of Technology</h3><p>Top grade (1.0) in AI and Software Development, Computer Vision, and Generative AI with Transformers. Krones leaderboard, Switchboard, PerfTriage, MIRA and the hackathon win.</p></li>
     </ol>
     <aside class="skillstack" aria-label="Skills I picked up along the way">
       <div class="pile"></div>
@@ -635,7 +635,7 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
     const stack = document.querySelector('.skillstack');
     if (!stack) return;
     const pile = stack.querySelector('.pile');
-    const icons = {'Python':'python','C++ basics':'cplusplus','OpenCV':'opencv','PyTorch':'pytorch','NVIDIA Jetson':'nvidia','Hugging Face':'huggingface','Transformers':'huggingface','Docker':'docker','LangChain':'langchain','LangGraph':'langgraph','Kubernetes':'kubernetes','FastAPI':'fastapi','Kafka':'apachekafka','ONNX':'onnx','Supabase':'supabase','PostgreSQL':'postgresql','GitHub Actions':'githubactions','Claude Code':'claude','MCP':'modelcontextprotocol','Git':'git','Linux':'linux','NumPy':'numpy','AWS (EC2, GPU)':'amazonwebservices','AWS EKS':'amazoneks','OpenAI API':'openai','Twilio':'twilio','SQLAlchemy':'sqlalchemy','pytest':'pytest','scikit-learn':'scikitlearn','BentoML':'bentoml','Groq':'groq','Gemini':'googlegemini','Ollama':'ollama'};
+    const icons = {'Python':'python','C++ basics':'cplusplus','OpenCV':'opencv','PyTorch':'pytorch','NVIDIA Jetson':'nvidia','Hugging Face':'huggingface','Transformers':'huggingface','Docker':'docker','LangChain':'langchain','LangGraph':'langgraph','Kubernetes':'kubernetes','FastAPI':'fastapi','Kafka':'apachekafka','ONNX':'onnx','Supabase':'supabase','PostgreSQL':'postgresql','GitHub Actions':'githubactions','Claude Code':'claude','MCP':'modelcontextprotocol','Git':'git','Linux':'linux','NumPy':'numpy','AWS (EC2, GPU)':'amazonwebservices','AWS EKS':'amazoneks','OpenAI API':'openai','Twilio':'twilio','SQLAlchemy':'sqlalchemy','pytest':'pytest','scikit-learn':'scikitlearn','BentoML':'bentoml','Groq':'groq','Gemini':'googlegemini','Ollama':'ollama','Cursor':'cursor','GitHub Copilot':'githubcopilot','Bolt':'stackblitz','Lovable':'lovable'};
     const steps = [...document.querySelectorAll('.step[data-skills]')];
     const groups = steps.map(step => step.dataset.skills.split('|').map((name, k) => {
       const el = document.createElement('span');
@@ -652,15 +652,15 @@ footer{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-con
       return el;
     }));
     const count = document.getElementById('skillCount');
-    let last = -2;
+    let last = -2, reached = -1;
     function update(){
       const line = innerHeight * 0.65;
       let active = -1;
       steps.forEach((s, i) => { if (s.getBoundingClientRect().top < line) active = i; });
-      if (active === last) return;
+      reached = Math.max(reached, active); if (active === last) return;
       let shown = 0;
       groups.forEach((chips, i) => chips.forEach(c => {
-        const on = i <= active;
+        const on = i <= reached;
         if (on && !c.classList.contains('in') && i < last + 1) c.style.setProperty('--d', '0s');
         c.classList.toggle('in', on);
         c.classList.toggle('new', i === active);
